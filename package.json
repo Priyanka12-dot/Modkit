@@ -1,0 +1,17 @@
+{
+  "name": "modkit-test01",
+  "version": "1.0.0",
+  "description": "ModKit — AI-powered Reddit mod assistant",
+  "main": "server/index.ts",
+  "scripts": {
+    "dev": "devvit playtest",
+    "upload": "devvit upload",
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@devvit/web": "^0.13.0",
+    "@types/node": "^25.9.1",
+    "hono": "^4.12.23",
+    "typescript": "5.8.3"
+  }
+}

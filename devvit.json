@@ -1,0 +1,38 @@
+{
+  "name": "modkit-test01",
+   
+  "server": {
+    "dir": "server",
+    "entry": "index.ts"
+  },
+
+  "menu": {
+    "items": [
+      {
+        "label": "🔍 Analyze with ModKit",
+        "description": "AI toxicity check on this post",
+        "forUserType": "moderator",
+        "location": ["post"],
+        "endpoint": "/internal/menu/analyze-post"
+      },
+      {
+        "label": "🔍 Analyze Comment with ModKit",
+        "description": "AI toxicity check on this comment",
+        "forUserType": "moderator",
+        "location": ["comment"],
+        "endpoint": "/internal/menu/analyze-comment"
+      },
+      {
+        "label": "📊 ModKit: Recent Alerts",
+        "description": "Show recent toxicity alerts for this subreddit",
+        "forUserType": "moderator",
+        "location": ["subreddit"],
+        "endpoint": "/internal/menu/show-alerts"
+      }
+    ]
+  },
+
+  "permissions": {
+    "reddit": { "enable": true, "scope": "moderator" }
+  }
+}
